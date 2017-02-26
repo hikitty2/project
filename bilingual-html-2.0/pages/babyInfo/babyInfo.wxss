@@ -1,0 +1,249 @@
+/**personal.wxss**/
+input[type=text]{
+  font-family: PingFangSC-Medium,sans-serif,"Microsoft YaHei",SimHei;
+  color: red
+}
+.audio slider{
+  width:460px;
+}
+.warp {
+  height: 100vh;
+  position: relative;
+  background-color: #eee;
+}
+
+.content {
+ background-color: #fff;
+  position: absolute;
+  top: 20rpx;
+  padding-left: 30rpx;
+  width: 96%;
+}
+
+.babyText {
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.headMiddle {
+  width: 100%;
+  height: 140rpx;
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 140rpx;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.headPic {
+  width: 100%;
+  height: 100rpx;
+  margin: auto 0;
+  line-height: 100rpx;
+}
+/*.headPic text,.name text,.babyText ,.birth text{
+  letter-spacing: 10rpx;
+}*/
+/*.phoneNumber text{
+  letter-spacing: 23rpx;
+  
+}*/
+.headPic image {
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  float: right;
+  margin-right: 30rpx;
+}
+
+.setPic {
+  width: 14rpx;
+  height: 25rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 48rpx;
+}
+.name placeholder{
+  text-align: right;
+}
+.name, .birth, .phoneNumber, .sex {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  height: 120rpx;
+  align-items: center;
+  line-height: 140rpx;
+  position: relative;
+}
+.pic-code{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid #e8e8e8;
+  height: 120rpx;
+  align-items: center;
+}
+.pic-code{
+  font-size: 30rpx;
+
+}
+.pic-code-text{
+  font-size:30rpx;
+  color:#333;
+  width:200rpx;
+}
+.pict{
+  display: flex;
+  align-items: center;
+  margin-right: 30rpx;
+
+}
+.code-pic{
+  width: 160rpx;
+  height: 70rpx;
+  
+}
+.refresh{
+  width:30rpx;
+  height:30rpx;
+  /*vertical-align: middle; */
+}
+.content .name input {
+  text-align: right;
+  width: 500rpx;
+  margin-right: 30rpx;
+  color: #999999;
+  font-size: 30rpx;
+  /*font-family: PingFangSC-Medium,sans-serif,"Microsoft YaHei",SimHei */
+}
+
+.phoneNumber input {
+  width:464rpx;
+   color: #999999;
+  text-align: right;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+}
+
+.sex input, .birth input {
+  width: 260rpx;
+  text-align: right;
+  margin-right: 30rpx;
+  font-size: 30rpx;
+  color: balck;
+}
+.birthPlaceholder{
+  width: 500rpx;
+  color: #999999;
+  font-size: 30rpx;
+  text-align: right;
+  margin-right: 30rpx;
+}
+ .genderPlaceholder {
+  width: 150rpx;
+  color: #999;
+  font-size: 30rpx;
+  text-align: center;
+  /*margin-right: 13rpx;*/
+}
+/*.genderValue image{
+   top: 50rpx;
+}*/
+.genderValue {
+  width: 90rpx;
+  color: #999999;
+  font-size: 30rpx;
+  text-align: center;
+  /*margin-right: 13rpx;*/
+}
+.genderValue .sexText{
+  color: #999999;
+}
+.birthValue {
+  width: 500rpx;
+  color: #999999;
+  font-size: 30rpx;
+  text-align: right;
+  margin-right: 30rpx;
+}
+
+/*.placeholder {*/
+  /*font-size: 30rpx;*/
+  /*color: #666;*/
+  /*font-family: PingFangSC-Medium, sans-serif,"Microsoft YaHei",SimHei;*/
+  /*text-align: right;*/
+/*}*/
+.placeholderMobile{
+  font-size: 30rpx;
+  color: #999999;
+  /*font-family: PingFangSC-Medium, sans-serif,"Microsoft YaHei",SimHei;*/
+}
+.code {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid #f2f2f2;
+  height: 120rpx;
+  margin: 0;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code input {
+  width: 120rpx;
+  font-size: 30rpx;
+}
+
+.verify {
+  display: flex;
+  flex: row;
+}
+
+.verify button {
+  border: none;
+  border-left: 1px solid #666;
+  background-color: white;
+  border-radius: 0;
+  font-size: 28rpx;
+  line-height: 1;
+  color: #666;
+  /*width: 176rpx;*/
+}
+
+button[disabled][type="default"], wx-button[disabled]:not([type]) {
+  color: rgba(0, 0, 0, 0.3);
+  background-color: white;
+}
+
+.messageCodeCss {
+  width: 160rpx;
+  padding-left: 15rpx;
+  padding-right: 15rpx;
+}
+
+button::after {
+  border: none;
+}
+
+.preserve {
+  width: 100%;
+  position: absolute;
+  bottom: 70rpx;
+}
+
+.preserveBtn {
+  width: 690rpx;
+  height: 88rpx;
+  color: #ffffff;
+  background-color: #22afff;
+}
+/*.code text{
+  letter-spacing: 23rpx;
+}*/
+.button-hover {
+  background-color: #d6d6d6;
+}
+.red{
+  color: red;
+}

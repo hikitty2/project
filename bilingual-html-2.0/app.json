@@ -1,0 +1,35 @@
+{
+  "pages":[
+    "pages/card/card",
+    "pages/record/record",
+    "pages/aboutOur/aboutOur",
+    "pages/babyInfo/babyInfo",
+    "pages/cardRecord/cardRecord",
+    "pages/cardInfo/cardInfo",
+    "pages/personal/personal"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3b3c40",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle":"white",
+    "backgroundColor": "#eeeeee"
+
+  },
+  "tabBar": {
+      "color": "#999999",
+      "selectedColor": "#f6ad32",
+      "backgroundColor": "#ffffff",
+      "list": [{
+      "pagePath": "pages/card/card",
+      "text": "我要打卡",
+      "iconPath": "images/个人页面/card.png",
+      "selectedIconPath": "images/个人页面/card.png"
+    },{
+      "pagePath": "pages/personal/personal",
+      "text": "个人中心",
+      "iconPath": "images/个人页面/personal.png",
+      "selectedIconPath": "images/个人页面/personal.png"
+    }]
+  }
+}

@@ -1,0 +1,149 @@
+<!--未打卡-->
+<block wx-if="{{userInfo.todayStatus==0}}">
+<!--<block wx-if="{{true}}">-->
+<view class="container">
+<view>
+ <view class="header">
+ <view>
+   <image style="width:30rpx;height:30rpx;margin-right:20rpx;" src="../../images/card-header-icon.png"></image>
+    <text>今日学习内容</text>
+ </view>
+ <view>
+    今天已有<text style="color:#ffd89b">{{userInfo.todayTotalRecords}}</text>个宝宝打卡
+ </view>
+ 
+    </view>
+
+    <!--课程部分-->
+    <view class="lesson-wrap">
+    <view style="flex:1;position:relative">
+    <image src="../../images/lesson-detail-icon.png" style="width:85rpx;height:69rpx;flex:1;"></image>
+        <text style="position:absolute;left:127rpx;font-size:30rpx">{{lessonInfo.title}}</text>
+    </view>
+        
+        <view class="lesson-teacher-info" style="display:flex">
+         <image style="width:53rpx;height:53rpx;border-radius:50%;background:black;margin-left:120rpx" src="{{lessonInfo.imageUrl}}"></image>
+            <text style="color:#333333;margin-left:16rpx;font-size:30rpx;margin-top:11rpx">{{lessonInfo.teacher}}老师</text>
+           
+        </view>    
+    </view>
+
+    <!--未完善信息提示-->
+
+    <view class="no-info" wx:if="{{userInfo.user.infoStatus==0}}">
+    <view>先去个人中心完善一下宝宝信息</view>
+    <view>更好的体验打卡功能</view>
+    <button bindtap='goToInfo'>完善信息</button>
+    </view>
+
+    <!--头像打卡提示-->
+    <view class="card-prompt" wx-if="{{userInfo.user.infoStatus==1}}">
+        <!--左边头像-->
+        <view style="flex:1;text-align:center">  
+       <image src="{{userInfo.user.imgUrl}}" style="width:110rpx;height:110rpx;border-radius:50%;"></image>
+       <view>
+        <image wx:for="{{thumbNum}}" style="height:19rpx;width:21rpx;margin-right:5rpx" src="../../images/thumb.png"></image>
+        </view>
+        </view>
+
+        <!--右边对话框-->
+        <view style="flex:4;padding-left:16rpx;">
+            <view class="prompt-content-wrap">
+            <view style="padding-top:13rpx;">
+             <text>亲爱的<text>{{userInfo.user.name}}</text>小朋友,{{sayhello}}</text>
+            </view>
+             <view style="padding-top:13rpx;" style="padding-bottom:13rpx">
+             <text>根据今日学习的内容，去完成打卡吧！</text>
+            </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+</view>
+<view style="padding-top:68rpx;padding-bottom:68rpx;background:white;">
+<button style="margin-bottom:20rpx" bindtap="qqqqq" class="bottom-btn">我要打卡</button>
+</view>
+   
+
+</block>
+
+
+
+
+
+
+
+
+
+
+<!--已打卡-->
+<block wx-if="{{userInfo.todayStatus==1}}">
+<!--<block wx-if="{{false}}">-->
+
+<view class="container">
+<view>
+ <view class="header">
+ <view>
+   <image style="width:30rpx;height:30rpx;margin-right:20rpx;" src="../../images/card-header-icon.png"></image>
+    <text>今日学习内容</text>
+ </view>
+    <button class="recard" bindtap="recard" hover-class="recard-hover">重新打卡</button>
+    </view>
+
+    <!--课程部分-->
+    <view class="lesson-wrap">
+    <view style="flex:1;position:relative">
+    <image src="../../images/lesson-detail-icon.png" style="width:85rpx;height:69rpx;flex:1;"></image>
+        <text style="position:absolute;left:127rpx;font-size:28rpx">{{lessonInfo.title}}</text>
+    </view>
+        
+        <view class="lesson-teacher-info" style="display:flex">
+         <image style="width:53rpx;height:53rpx;border-radius:50%;background:black;margin-left:120rpx" src="{{lessonInfo.imageUrl}}"></image>
+            <text style="color:#333333;margin-left:16rpx;font-size:30rpx;margin-top:11rpx">{{lessonInfo.teacher}}老师</text>
+           
+        </view>    
+    </view>
+
+      <!--未完善信息提示-->
+
+    <view class="no-info" wx:if="{{userInfo.user.infoStatus==0}}">
+    <view>先去个人中心完善一下宝宝信息</view>
+    <view>更好的体验打卡功能</view>
+    <button bindtap='goToInfo'>完善信息</button>
+    </view>
+
+    <!--头像打卡提示-->
+    <view class="card-prompt" wx:if="{{userInfo.user.infoStatus==1}}">
+        <!--左边头像-->
+        <view style="flex:1;text-align:center">  
+        <image src="{{userInfo.user.imgUrl}}" style="width:110rpx;height:110rpx;border-radius:50%;"></image>
+        <view>
+        <image wx:for="{{thumbNum}}" style="height:19rpx;width:21rpx;margin-right:5rpx" src="../../images/thumb.png"></image>
+      
+        </view>
+        </view>
+        
+
+        <!--右边对话框-->
+        <view style="flex:4;padding-left:16rpx;">
+            <view class="prompt-content-wrap" style="padding-top:15rpx;">
+            <view>
+             <text style="font-size:26rpx;padding:10rpx 0;line-height:26rpx;">亲爱的<text wx-if="{{userInfo.user.name}}">{{userInfo.user.name}}</text><text wx-if="{{!userInfo.user.name}}">小朋友</text>,你已累计打卡{{userInfo.user.totalRecord}}天了，</text>
+            </view>
+            <view>
+             <text style="font-size:26rpx;padding:10rpx 0;;line-height:26rpx;">超过了{{rate}}%，<text wx-if="{{rate<=60 && userInfo.rank>10}}">很多小朋友一直在坚持打卡，你要加油呦~</text><text wx-if='{{rate>60 && rate <80 && userInfo.rank>10}}'>明天记得继续打卡，再接再厉~</text><text wx-if='{{rate>=80 &&  userInfo.rank>10}}'>马上就进入前10了，你真棒~</text><text wx-if='{{userInfo.rank<=10}}'>前面还有{{userInfo.rank-1}}名小朋友，快超越Ta们吧~</text>
+             </text>
+            </view>
+              <view>
+            </view>
+            </view>
+        </view>
+    </view>
+
+</view>
+</view>
+<view style="padding-top:68rpx;padding-bottom:68rpx;background:white;">
+   <button style="margin-bottom:20rpx" wx-if="{{userInfo.todayStatus==1}}" class="bottom-btn" bindtap="toCardRecord">我要听听</button>
+</view>
+</block>

@@ -1,0 +1,71 @@
+<!--record.wxml-->
+
+<view class="container" style="background:white;">
+
+    <view class="header">
+        <view class="header-topleft">
+            <!--<image src="src"></image>-->
+            <image src="{{imageUrl}}" style="width:150rpx;height:145rpx;border-radius:50%;background:black;"></image>
+            <view>{{teacher}}老师</view>
+            
+        </view>
+        <view class="cardnumber">
+           
+            <view style="vertical-align:middle;display:inline-block;">大声读出来！你是最棒的</view>
+            </view>
+        </view>
+        
+
+<view class="block">
+    <view class="courseus">
+        <view class="lesson-content">
+        <view class="lesson-content-english">{{title}}</view>
+        
+        </view>
+    </view>
+
+    <view class="time">
+    <view>{{minute}}:{{sec}}</view>
+    </view>
+</view>
+<view class="wave-block">
+
+<image wx:if="{{isWave}}" class="wave" src="../../images/recordclock/yinp.gif"></image>
+
+</view>
+
+<view class="audio-block">
+    <view class="sideBar">
+        <progress class="progress" percent="{{percent1}}"                   stroke-width="4" color="#5fc35c" />
+
+        <text class="circle" style="left:{{percent1}}%;"></text>
+        <view class="second">
+    <!--<view>0</view>-->
+        <view>60s</view>
+        </view>
+    </view>
+    
+</view>
+
+
+<view class="record-block">
+    <view class="record">
+        <view   class="startRecord" hover-class="hover-startRecord">
+        <button class="{{start}}" plain="true" bindtap="startRecord" disabled="{{isStart}}" ></button>
+        <view class="field">{{record}}</view>
+    </view>
+     <view class="stopRecord">
+        <button class="{{stop}}" plain="true" bindtap="stopRecord" disabled="{{isStop}}"></button>
+        <view class="field">结束</view>
+     </view>
+    <view class="goPlay">
+        <button class="{{play}}" plain="true" bindtap="goPlay" disabled="{{isPlay}}"></button>
+    <view class="field">重播</view>
+    </view>
+
+        </view>
+    </view>
+     <button loading="{{uploadOk!=''}}"  disabled="{{complete||uploadOk!=''}}" bindtap="uploadPic"  class="{{(complete||uploadOk!='') ? 'disabled-btn':'complete'}}" ><text wx:if="{{uploadOk==''}}">完成</text><text wx:if="{{uploadOk!=''}}">上传中</text></button>
+</view>
+   
+   

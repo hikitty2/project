@@ -1,0 +1,108 @@
+/**cardInfo.wxss**/
+.audio {
+    height: 166rpx;
+    border: 1px solid #e8e8e8;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 91%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.audio image{
+    width: 66rpx;
+    height:66rpx;
+    margin-left: 26rpx;
+}
+.sideBar{
+    position: relative;
+    margin:20rpx;
+}
+.progress{   
+    width:490rpx;
+}
+.circle{
+    background:transparent ;
+    position: absolute;
+   transform: translate(-10rpx, -18rpx);
+    display: inline-block;
+    width:31rpx;
+    height: 31rpx;
+    background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACUAAAAlCAYAAADFniADAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6RTA0QzEwMkZFMDdCMTFFNjlCQ0NDMjA1RTBCNkUzQUMiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6RTA0QzEwMzBFMDdCMTFFNjlCQ0NDMjA1RTBCNkUzQUMiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpFMDRDMTAyREUwN0IxMUU2OUJDQ0MyMDVFMEI2RTNBQyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpFMDRDMTAyRUUwN0IxMUU2OUJDQ0MyMDVFMEI2RTNBQyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PlTsBqUAAAOJSURBVHja1FhLTxRBEJ6eGWAfWUE5AD4SYogmoBijBw960l9AfHDiTxgTiIkhXr1wMm7QGyERD0okmBASDut9o7JERSJZD0I4sPKGfbT1DT2b3p5Z6IXdiVZSmZ6Z7q++6aqprm5mHF2YRh9eK2C//kxplyPDlXZVSbFD1I+Ur0JKgBk70kxCLVKbtJ60IZFInF9bW3u4u7v7Np/Pfy8UCn9gDFe6X6Dn7/Ae/dBfjLMFjoMJbgo/bUKmAKojDc3Pz98gg+8JLMf1JI/+GIfxAscSuKxSUi4hZ3b6+/tPbm5uvoARfjTJ0/g4cKRZMyuJaZlQw8zMTEc2m/3MqyDAAZ5wqTaxEkLT09MXKEbSvIoCPOBWQswN6vqBgYFm+rIvvAYCXOALV1oHkWJSUIcRA7yGAnzYkYLfl5jrtlAqlbp5jKDW9iTsiL/SdaO/20gjOzs7EzwAgR3YK+dG5gb3+Pj4xQBmqThbsCcFPVNd58TSysrKIx6gwJ4UW44LbWUNM6PR6C3dhLa8vWSMLb425jIp576zqcu43/7AaAm3amfpWCwGe89lHkzJTXW5XC5pWVbHYWBL27+Np58Gja3cVsnziB0xnlwZNFrDbVqkKG/9sG37KjWzpDnSgqlWAaZptuiAvVkc8xCC4Bne6YqwV1JxqL8hVRIspgPmusxPUplZ/UV2354nwEsLIc7XjQDFz56HFNVEyzpgCOpy0tV0SZuUnz2VFKf656sO2N32e05Qq4JneKcrZO+bWiqbavlKFeNHHbC28GnnL7vWfN0IWSFH0cYzvNMVspdQSmbPEhMdGRnpDDKjj46OIg6ifktNMaOTNtIKPhkEI9iBPTWjq+4rQJPJ5DPRrqXIdgqq+zxVAmlTJpN5WctZAj7sHFQllNRTWJL6+vrO7O3tzdaCEHCBDzsH1VOeypP0xPDwcDethb+qSQh4wAW+TuXp58bGeDx+mXLJXDUIAQd4IrgjOjW6ZzcjftXGnp6es6urq6+Os+/D+N7e3nOCUPRY2yzxRZjqU1NTU7c3NjY+VLJDRn/aUt3BeIETqZSQ7w5Z+D4m/pbmoaGh7nQ6/ZgMTlDQLlBNtC72dOt0/5OeT+I9+qG/GBcTOIfukJnmSYspnQG4V1nd/m6ecfNOXrTVa/EExu/UhWnMmCF9lXw1yxwHcTUZS20uJWX+z5xP6Rye/dcneYGeef4VYAC2e1PnxleikwAAAABJRU5ErkJggg==');
+    background-size:cover;
+}
+.start ,.end{
+    color: #999999;
+    font-size: 24rpx;
+}
+.start{
+    margin: 0 20rpx;
+
+}
+.mainbody{
+    width: 92%;
+    /*height: 700rpx;*/
+    /*border:1px solid black;*/
+    /*margin-top:50rpx;*/
+    padding-bottom:235rpx;
+    margin-left:30rpx;
+}
+.title{
+    line-height: 20rpx;
+    width:95%;
+    padding-left:30rpx;
+}
+.title-content{
+    font-size: 32rpx;
+    color: #333333;
+    line-height: 50rpx;
+}
+.time{
+   font-size: 24rpx;
+   color: #999999;
+   float: right;
+   padding-right: 40rpx;
+   margin-bottom: 40rpx;
+}
+.share image{
+    position: fixed;
+    bottom: 0;
+  width: 750rpx;
+  height: 190rpx;
+}
+.tip{
+    margin-top: 55rpx;
+    font-size: 30rpx;
+    color: #000000;
+      
+}
+.tip image{
+    width: 35rpx;
+    height:28rpx;
+    vertical-align: -8%;
+    margin-right: 10rpx;
+}
+.content{
+    width: 95%;
+    margin-top: 40rpx;
+    font-size: 28rpx;
+    word-break: break-all;
+    line-height: 30rpx;
+
+}
+.content text:first-child{
+    margin-right: 40rpx;
+}
+.word{
+    margin-bottom: 40rpx;
+}
+.chinese{
+    color: #999999;
+    margin-bottom: 33rpx;
+    font-size: 26rpx;
+}
+.english{
+    margin-bottom: 15rpx;
+    font-size: 28rpx;
+}

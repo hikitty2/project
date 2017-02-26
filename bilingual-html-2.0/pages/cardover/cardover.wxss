@@ -1,0 +1,42 @@
+.teacher{
+
+overflow: hidden
+}
+.portrait{
+  position: relative;
+    left: 280rpx;
+    top: 50rpx;
+    }
+    .headPic{
+        width:150rpx;
+        height: 150rpx;
+        background: black;
+         border-radius: 50%;
+    }
+.classroom{
+    text-align: center;
+    border: 1px solid;
+  width:700rpx;
+   
+}
+.classContent{
+    margin: 40rpx;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 150rpx;
+}
+.day{
+    text-align: center;
+      display: flex;
+    flex-direction: column;
+    
+}
+.day text{
+    margin: 20rpx 0;
+}
+.achievement{
+margin-top:160rpx;
+    }

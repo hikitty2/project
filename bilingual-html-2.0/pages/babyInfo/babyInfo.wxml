@@ -1,0 +1,88 @@
+
+<!--personal.wxml-->
+<view class="warp">
+  <view class="content">
+
+    <!--头像-->
+    <view class="headMiddle">
+      <view class="headPic" bindtap="changePic">
+        <text class="babyText">
+          <text class="red">*</text>宝宝头像</text>
+        <image src="{{headPicSrc}}" mode="aspectFill"></image>
+      </view>
+    </view>
+
+    <!--姓名-->
+    <view class="name">
+      <text class="babyText">
+        <text class="red">*</text>宝宝姓名</text>
+      <input type="text" placeholder="真实姓名或英文名字" placeholder-class="placeholder" value="{{name}}" bindblur="getName" maxlength="14" />
+    </view>
+    <view class="sex" bindtap="selectSex">
+      <text class="babyText">
+        <text class="red">*</text>宝宝性别</text>
+
+      <!--<input  bindtap="selectSex" value="{{sex}}" placeholder="未设置" placeholder-class="placeholder" />-->
+      <view class="{{genderClass}}">
+
+        <!--<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAZCAYAAAABmx/yAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEVFMTlEMTZDRTg1MTFFNjhDQ0FBNTQ3QjFGMjQ4NDEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEVFMTlEMTdDRTg1MTFFNjhDQ0FBNTQ3QjFGMjQ4NDEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowRUUxOUQxNENFODUxMUU2OENDQUE1NDdCMUYyNDg0MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowRUUxOUQxNUNFODUxMUU2OENDQUE1NDdCMUYyNDg0MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PviiI6AAAADYSURBVHjanNO7DcIwEAZg+0RDBRJiCvcMkIIqY1AgNmADJHrEIGmgYIAUVHbHBlRUlOY3shGPYN/F0q9zHl8c5xRtrZ0qpRpkbYw5KeYgZIHMAnbOVRK4QfbIUIIJr+dRV1IcVlR9MKWJFNP7gQTT9wkupq6ncTD920MJU+7L5bD23hebjZs1yg5ZInekZsGIxygXZIK0xEQjlENENqxITHSMP0JAFfZ+JQE6JxSuDZioReZAt2w7SqgTctAP5KIPKEEvKEVP2AelFRspSn3cxnnNRWE8BBgAVyiNCkhVPKEAAAAASUVORK5CYII=" class="setPic"></image>-->
+        <text class="sexText">{{sex}}</text>
+      </view>
+    </view>
+
+    <!--生日-->
+    <view class="birth" bindtap="">
+      <text class="babyText">
+        <text class="red">*</text>宝宝生日</text>
+      <picker disabled="{{bath}}" mode="date" value="{{dateValue}}" start="1900-01-01" end="{{endDate}}" bindchange="datePickerBindchange">
+
+        <!--<input  placeholder="未设置" value="{{birth}}" placeholder-class="placeholder"/>-->
+        <view class="{{birthClass}}">
+          {{birth}}
+        </view>
+      </picker>
+
+      <!--加个显示判断-->
+
+      <!--<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAZCAYAAAABmx/yAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTMyIDc5LjE1OTI4NCwgMjAxNi8wNC8xOS0xMzoxMzo0MCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTUuNSAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MEVFMTlEMTZDRTg1MTFFNjhDQ0FBNTQ3QjFGMjQ4NDEiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MEVFMTlEMTdDRTg1MTFFNjhDQ0FBNTQ3QjFGMjQ4NDEiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDowRUUxOUQxNENFODUxMUU2OENDQUE1NDdCMUYyNDg0MSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDowRUUxOUQxNUNFODUxMUU2OENDQUE1NDdCMUYyNDg0MSIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PviiI6AAAADYSURBVHjanNO7DcIwEAZg+0RDBRJiCvcMkIIqY1AgNmADJHrEIGmgYIAUVHbHBlRUlOY3shGPYN/F0q9zHl8c5xRtrZ0qpRpkbYw5KeYgZIHMAnbOVRK4QfbIUIIJr+dRV1IcVlR9MKWJFNP7gQTT9wkupq6ncTD920MJU+7L5bD23hebjZs1yg5ZInekZsGIxygXZIK0xEQjlENENqxITHSMP0JAFfZ+JQE6JxSuDZioReZAt2w7SqgTctAP5KIPKEEvKEVP2AelFRspSn3cxnnNRWE8BBgAVyiNCkhVPKEAAAAASUVORK5CYII=" class="setPic" wx:if="{{birth=='未设置'}}"></image>-->
+
+      <!--提示框-->
+    </view>
+
+    <!--手机号-->
+    <view class="phoneNumber">
+      <text class="babyText">
+        <text class="red">*</text>手机号</text>
+      <input type="number" maxlength="11" placeholder="未设置" placeholder-class="placeholderMobile" bindblur="mobile" disabled="{{bath}}" value="{{phoneNumber}}" />
+    </view>
+
+    <!--图形验证码-->
+
+    <!--<view class="pic-code" wx:if="{{code}}">
+            <text class="pic-code-text">图形验证码</text>
+            <input type="number" maxlength="4"  placeholder-class="placeholder" bindblur="" value="" />
+            <view class="pict">
+                <image class="code-pic" src="../../images/pic-code.png"></image>
+                <image class="refresh" src="../../images/refresh.png"></image>                            
+            </view> 
+        </view>-->
+
+    <!--验证码-->
+    <view class="code" wx:if="{{isCode}}">
+      <view>
+        <text class="babyText">
+          <text class="red">*</text>验证码</text>
+      </view>
+      <view>
+        <input maxlength="6" bindblur="getCode" type="number" />
+      </view>
+      <view class="verify">
+        <button bindtap="messageCode" disabled="{{timeOut}}" class="{{messageCodeCss}}">{{messageCode}}</button>
+        <button bindtap="voiceCode" disabled="{{timeOut}}">{{voiceCode}}</button>
+      </view>
+    </view>
+  </view>
+  <view class="preserve">
+    <button class="preserveBtn" bindtap="submit" disabled="{{isSendCode&&isCode}}">保存</button>
+  </view>
+</view>
